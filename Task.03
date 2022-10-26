@@ -1,0 +1,24 @@
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.Write ("Enter the number you want to convert to binary : ");
+        int num1 = Convert.ToInt32(Console.ReadLine()) ;
+        Console.Write ("Enter the shift value : ") ;
+        int shiftvalue = Convert.ToInt32(Console.ReadLine()) ;
+        Console.WriteLine ("<---------><-----------><----------><---------->") ;
+        Console.WriteLine ("The number you entered is : " + num1) ;
+        string numbi = Convert.ToString(num1 , 2) ; // numbi is num1 in binary
+        Console.WriteLine ("The number in binary : " + numbi) ;
+        string numhex = Convert.ToString( num1 , 16) ; // numhex is num1 in hexadecimal 
+        Console.WriteLine("The number in hexadecimal is : " + numhex) ;
+        Console.WriteLine ("<---------><-----------><----------><---------->") ;
+        decimal decinumbi =(Convert.ToDec(numbi)) ; //decinumbi is used because shift operator does not work on string type operand
+        int rightshiftnum1 = decinumbi << shiftvalue ; // shift numbi is num1 shifted by "shiftvalue" amount to the right
+        Console.WriteLine ("The number shifted to the right : " + rightshiftnum1) ;
+     }
+ }
+ 
