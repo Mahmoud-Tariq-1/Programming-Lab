@@ -5,8 +5,8 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         Console.Write("Enter the nuber you want to convert to binary : ") ;
-        int num1 = Convert.ToInt32(Console.ReadLine()) ;
-        Console.Write("Enter the shift value : ") ;
+        int num1 = Convert.ToInt32(Console.ReadLine()) ; // num1 is the number inputed by the user
+        Console.Write("Enter the shift value : ") ; // shiftvalue is the amount he number will be shifted by
        int shiftvalue = Convert.ToInt32(Console.ReadLine()) ;
        Console.WriteLine("*-------*-------*--------*-------*") ;
         string numbi = Convert.ToString(num1 , 2) ; // numbi is num1 in binary
@@ -15,16 +15,16 @@ public class HelloWorld
         string numhex = Convert.ToString(num1 , 16) ; // numhex is num1 in hexadecimal
         Console.WriteLine("The number you entered in hexadecimal : " + numhex) ;
         Console.WriteLine("*-------*-------*--------*-------*") ;
-        int rightshiftnum1 = num1>>shiftvalue ;
-        string rightshiftnumbi = Convert.ToString(rightshiftnum1 , 2) ;
+        int rightshiftnum1 = num1>>shiftvalue ; // rightshiftnum1 is num1 shifted to the right
+        string rightshiftnumbi = Convert.ToString(rightshiftnum1 , 2) ; // rightshiftnumbi is num1 shifted to the right in binary
         Console.WriteLine("The number in binary shifted to the right : " + rightshiftnumbi) ;
-        string rightshiftnumhex = Convert.ToString(rightshiftnum1 , 16) ;
+        string rightshiftnumhex = Convert.ToString(rightshiftnum1 , 16) ; // rightshiftnumhex is num1 shifted to the right in hexadecimal
         Console.WriteLine("The number in hexadecimal shifted to the right : " + rightshiftnumhex ) ;
         Console.WriteLine("*-------*-------*--------*-------*") ;
-        int leftshiftnum1 = num1<<shiftvalue ;
-        string leftshiftnumbi = Convert.ToString(leftshiftnum1 , 2) ;
+        int leftshiftnum1 = num1<<shiftvalue ; // leftshiftnum1 is num1 shifted to the left by "shiftvalue" amount
+        string leftshiftnumbi = Convert.ToString(leftshiftnum1 , 2) ; // leftshiftnumbi is num1 in binary shifted to the left by "shiftvalue" amount
         Console.WriteLine("The number in binary shifted to the left : " + leftshiftnumbi) ;
-        string leftshiftnumhex = Convert.ToString(leftshiftnum1 , 16) ;
+        string leftshiftnumhex = Convert.ToString(leftshiftnum1 , 16) ; // leftshiftnumhex is num1 in hexadecimal shifted to the left by "shiftvalue" amount
         Console.WriteLine("The number in hexadecimal shifted to the left : " + leftshiftnumhex) ;
     }
 }
