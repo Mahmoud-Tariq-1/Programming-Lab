@@ -1,6 +1,6 @@
 using System;
 
-public class task.03
+public class task03
 {
     public static void Main(string[] args)
     {
